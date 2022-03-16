@@ -33,7 +33,6 @@ const postTemplate = (post) => `<a href="/post-detail.html?id=${post.id}">
 `;
 
 fetchPosts().then((posts) => {
-  console.log(posts);
   // 문자열이므로 join을 통해 하나의 문자열로 만듦.
   $PostContainer.innerHTML = posts.map((post) => postTemplate(post)).join('');
 });
